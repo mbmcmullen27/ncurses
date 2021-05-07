@@ -36,3 +36,22 @@ int main(){
     // these all make the same color?
 }
 ```
+- "In Line 13, the _init\_color_ fucnction assigns a new color to constant PINK, which is color 1 (originally red)" (pg. 28)
+- So we can't change color and we're not failing the can_change_color() check apparently. Neat...
+
+```C
+int main(){
+    //...
+    init_color(PINK, 0, 1000, 0);  //this for some reason replaces green with red in the terminal when we exit the window
+    init_pair(1, PINK, COLOR_BLACK);
+    attrset(COLOR_PAIR(1));
+    printw("This is the new color %d.\n", PINK);
+}
+```
+![color consequenses](./chapter3/pink.png)
+
+- init_color functionality may have changed since the writing of this book. This is something we should look into ***
+
+
+[notice.c](./chapter3/notice.c)
+- no beep or flash on fluent terminal (this may be a fluent setting I turned off)
