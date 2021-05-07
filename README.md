@@ -50,7 +50,9 @@ int main(){
 ```
 ![color consequenses](./chapter3/pink.png)
 
-- init_color functionality may have changed since the writing of this book. This is something we should look into ***
+- Could init_color functionality may have changed since the writing of this book. This is something we should look into ***
+- Instead of assigning a new color, it seems to overwrite the terminal color, but not in the way I'd expect. 
+- This could also be fluent terminal strangeness, we should test other terminals (with and without themes)
 
 
 [notice.c](./chapter3/notice.c)
