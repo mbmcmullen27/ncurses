@@ -7,7 +7,7 @@ int main(){
 
     start_color();
     if(!can_change_color())
-        addstr("I'm shocked if xterm-256 doesn't support this...");
+        addstr("I'm shocked if xterm-256 doesn't support this...\n");
     
     init_color(PINK, 1000, 0, 0);
     init_pair(1, PINK, COLOR_BLACK);
