@@ -1,5 +1,5 @@
 # Dan Gookin's Guide to Ncurses Programming
-We got a book about ncurses and we're coding along.
+We got a [book](https://c-for-dummies.com/ncurses/) about ncurses and we're coding along.
 
 __<a>[terminal text attribute test](./chapter4/attrtest.c)</a>__
 
@@ -64,3 +64,5 @@ clang glub.c -l ncurses
     - no beep or flash on fluent terminal (this may be a fluent setting I turned off)
 
 __<a>\*</a> notice.c and twinkle.c work properly on xterm in linux, but the can_change_color() condition fails (tested with xserver on Arch)__ 
+
+### <a>ALTCHARSET table [pg. 39](https://c-for-dummies.com/ncurses/tables/table04-03.php)</a> 
