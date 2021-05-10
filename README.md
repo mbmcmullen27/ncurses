@@ -65,4 +65,18 @@ clang glub.c -l ncurses
 
 __<a>\*</a> notice.c and twinkle.c work properly on xterm in linux, but the can_change_color() condition fails (tested with xserver on Arch)__ 
 
-### <a>ALTCHARSET table [pg. 39](https://c-for-dummies.com/ncurses/tables/table04-03.php)</a> 
+__<a>ALTCHARSET table [pg. 39](https://c-for-dummies.com/ncurses/tables/table04-03.php)</a>__
+
+
+### <a>Chapter 4</a>
+
+> [Errata](https://c-for-dummies.com/ncurses/#errata) In Chapter 4, the section on Unicode should recommend that the ncursesw library may be required in place of ncurses. Use the switch -lncursesw on the command line. Ensure that you have the libncursesw5-dev library installed; use your distro's package manager. (Thanks to reader Matt, 2021-01-15.)
+
+- [unicode.c](./chapter4/unicode.c)
+    - works in WSL but not in xterm (Arch or Xserver likely need some extra configuration to turn unicode on)
+    - needs to be compiled with ncursesw
+
+- [ustring.c](./chapter4/ustring.c)
+    - _"If you don't see the text output in Cyygwin, change the font to Lucinda Console or some other font that suports Unicode text." (pg.48)_
+
+
