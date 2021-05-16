@@ -85,3 +85,20 @@ __<a>ALTCHARSET table [pg. 39](https://c-for-dummies.com/ncurses/tables/table04-
 pg. 80
 
     Though the getnstr() function does cap input, its up to you to ensure that the value of n is less than the buffer size. Otherwise input overflow occurs.
+
+### <a>Chapter 9</a>
+
+- [anotherwin.c](./chapter9/anotherwin.c) 
+
+    ```rxvt    
+    anotherwin.c:17:18: error: too few arguments to function call, expected 1, have 0
+        wrefresh();
+        ~~~~~~~~ ^
+    /usr/include/curses.h:873:28: note: 'wrefresh' declared here
+    extern NCURSES_EXPORT(int) wrefresh (WINDOW *);                         /* implemented */
+                            ^
+    1 error generated.
+    ```
+    - line 16 adds a string to the standard screen, changed line 17 to a normal refresh();
+
+> Newlines displayed in Ncurses erase to the end of the line, clobbering any text from the cursor to the right edge of the window.
