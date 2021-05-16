@@ -80,3 +80,8 @@ __<a>ALTCHARSET table [pg. 39](https://c-for-dummies.com/ncurses/tables/table04-
     - _"If you don't see the text output in Cyygwin, change the font to Lucinda Console or some other font that suports Unicode text." (pg.48)_
 
 
+### <a>Chapter 8</a> 
+
+pg. 80
+
+    Though the getnstr() function does cap input, its up to you to ensure that the value of n is less than the buffer size. Otherwise input overflow occurs.
