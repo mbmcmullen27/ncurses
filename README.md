@@ -116,3 +116,11 @@ y tho?
 (pg.102)
 
     "As with a primary window, removing a subwindow doesn't remove its contents from the screen. Any text was writtin to the subwindow is inherited by the parent window, so nothig is truly lost."
+
+### <a>Chapter 11</a>
+
+(pg.114)
+
+    "Do not move subwindows. These windows share memory with their parent window and when you move the subwindow, Ncurses cannot update which text was moved in which window. (This is one of those Bad Things about subwindows.)
+
+- I wonder what this means for moving parent windows that have subwindows
