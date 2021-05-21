@@ -82,7 +82,7 @@ __<a>ALTCHARSET table [pg. 39](https://c-for-dummies.com/ncurses/tables/table04-
 
 ### <a>Chapter 8</a> 
 
-pg. 80
+(pg. 80)
 
     Though the getnstr() function does cap input, its up to you to ensure that the value of n is less than the buffer size. Otherwise input overflow occurs.
 
@@ -102,3 +102,17 @@ pg. 80
     - line 16 adds a string to the standard screen, changed line 17 to a normal refresh();
 
 > Newlines displayed in Ncurses erase to the end of the line, clobbering any text from the cursor to the right edge of the window.
+
+### <a>Chapter 10</a>
+
+- [subsub.c](./chapter10/subsub.c)
+
+(pg.101)
+
+    "To ensure that the windows show up, I added a refresh() function at line 9. That's because this code doesn't use the standard screen, yet I've discovered in my travels that it's good practice to add a refresh oft he standard screen before adding other windows."
+
+y tho?
+
+(pg.102)
+
+    "As with a primary window, removing a subwindow doesn't remove its contents from the screen. Any text was writtin to the subwindow is inherited by the parent window, so nothig is truly lost."
