@@ -124,3 +124,13 @@ y tho?
     "Do not move subwindows. These windows share memory with their parent window and when you move the subwindow, Ncurses cannot update which text was moved in which window. (This is one of those Bad Things about subwindows.)
 
 - I wonder what this means for moving parent windows that have subwindows
+
+### <a>Chapter 12</a>
+
+(pg.115) Interesting note on scrolling and wrapping :
+
+    "This behavior is most likely based on paper through a teletype machine, the ancestor of all computer terminals, and why terminal interfaces use the letters TTY."
+
+(pg.116)
+
+    "'\t' advances the curses to the next tab stop. Default tab stops are every 8 characterss, though you can alster the global variable TABSTOP to resset the value"
