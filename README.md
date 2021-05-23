@@ -134,3 +134,17 @@ y tho?
 (pg.116)
 
     "'\t' advances the curses to the next tab stop. Default tab stops are every 8 characterss, though you can alster the global variable TABSTOP to resset the value"
+
+### <a>Chapter 13</a>
+
+(pg.127)
+
+    "You probably won't use pads that much[...] I've never used a subpad"
+
+__Forbidden Pad Stuff__
+- mvwin()
+- scroll()
+- scrl()
+- subwin()
+- wrefresh()
+- wnoutrefresh()
