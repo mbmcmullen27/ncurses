@@ -105,41 +105,40 @@ __<a>ALTCHARSET table [pg. 39](https://c-for-dummies.com/ncurses/tables/table04-
 
 ### <a>Chapter 10</a>
 
-- [subsub.c](./chapter10/subsub.c)
+- [subsub.c](./chapter10/subsub.c) (pg.101)
 
-(pg.101)
+        "To ensure that the windows show up, I added a refresh() function at line 9. That's because this code doesn't use the standard screen, yet I've discovered in my travels that it's good practice to add a refresh oft he standard screen before adding other windows."
 
-    "To ensure that the windows show up, I added a refresh() function at line 9. That's because this code doesn't use the standard screen, yet I've discovered in my travels that it's good practice to add a refresh oft he standard screen before adding other windows."
+    y tho?
 
-y tho?
+- (pg.102)
 
-(pg.102)
-
-    "As with a primary window, removing a subwindow doesn't remove its contents from the screen. Any text was writtin to the subwindow is inherited by the parent window, so nothig is truly lost."
+      "As with a primary window, removing a subwindow doesn't remove its contents from the screen. Any text was writtin to the subwindow is inherited by the parent window, so nothig is truly lost."
 
 ### <a>Chapter 11</a>
 
-(pg.114)
+- (pg.114)
 
-    "Do not move subwindows. These windows share memory with their parent window and when you move the subwindow, Ncurses cannot update which text was moved in which window. (This is one of those Bad Things about subwindows.)
+        "Do not move subwindows. These windows share memory with their parent window and when you move the subwindow, Ncurses cannot update which text was moved in which window. (This is one of those Bad Things about subwindows.)
 
 - I wonder what this means for moving parent windows that have subwindows
 
 ### <a>Chapter 12</a>
 
-(pg.115) Interesting note on scrolling and wrapping :
+- (pg.115) Interesting note on scrolling and wrapping :
 
-    "This behavior is most likely based on paper through a teletype machine, the ancestor of all computer terminals, and why terminal interfaces use the letters TTY."
 
-(pg.116)
+        "This behavior is most likely based on paper through a teletype machine, the ancestor of all computer terminals, and why terminal interfaces use the letters TTY."
 
-    "'\t' advances the curses to the next tab stop. Default tab stops are every 8 characterss, though you can alster the global variable TABSTOP to resset the value"
+- (pg.116)
+
+        "'\t' advances the curses to the next tab stop. Default tab stops are every 8 characterss, though you can alster the global variable TABSTOP to resset the value"
 
 ### <a>Chapter 13</a>
 
-(pg.127)
+- (pg.127)
 
-    "You probably won't use pads that much[...] I've never used a subpad"
+        "You probably won't use pads that much[...] I've never used a subpad"
 
 __Forbidden Pad Stuff__
 - mvwin()
@@ -148,3 +147,16 @@ __Forbidden Pad Stuff__
 - subwin()
 - wrefresh()
 - wnoutrefresh()
+
+### <a>Chapter 14</a>
+
+### <a>Chapter 15</a>
+
+- [steps.c](./chapter15/steps.c)
+    I've never seen that for loop syntax with two declared increment operations. Neat. I wonder if this is commonly supported language feature elsewhere or specific to C
+
+- [pluc.c](./chapter15/plus.c)
+    ```c
+    move(maxy/4,4*(maxx/4)); // for some reason, maxx only gets us 3/4 of the way to the right edge of the screen
+    vline(0,2*(maxy/4));
+    ```
