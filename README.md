@@ -154,7 +154,15 @@ __Forbidden Pad Stuff__
 
 - [steps.c](./chapter15/steps.c)
     I've never seen that for loop syntax with two declared increment operations. Neat. I wonder if this is commonly supported language feature elsewhere or specific to C
+    - yup! its the comma operator, common in c style languages, evaluates the first expression and discards the result, then returns the right operand. Javascript has it too.
+    ```javascript
+    let x = 1;
 
+    x = (x++, x);
+
+    console.log(x);
+    // expected output: 2
+    ```
 - [pluc.c](./chapter15/plus.c)
     ```c
     move(maxy/4,4*(maxx/4)); // for some reason, maxx only gets us 3/4 of the way to the right edge of the screen
